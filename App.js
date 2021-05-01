@@ -9,7 +9,9 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback,
   Button,
-  Alert
+  Alert,
+  Platform,
+  StatusBar as stb
 } from "react-native";
 
 export default function App() {
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingTop: 20,
+    paddingTop: Platform.OS === "android" ? stb.currentHeight : 0, // We had to rename StatusBar from "react-native"; as stb to avoid conflict from { StatusBar } from "expo-status-bar";
     justifyContent: "center",
     alignItems: "center"
   }
