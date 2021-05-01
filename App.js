@@ -22,12 +22,21 @@ export default function App() {
           backgroundColor: "dodgerblue",
           //flexBasis: 100, //Width or height,
           //flexGrow: 1, //same as flex
-          width: 400,
-          flexShrink: 1, //same as flex with negative value
+          width: 100,
+          // flexShrink: 1, //same as flex with negative value
           height: 100
         }}
       ></View>
-      <View style={{ backgroundColor: "gold", width: 100, height: 100 }}></View>
+      <View
+        style={{
+          backgroundColor: "gold",
+          width: 100,
+          height: 100,
+          top: 20,
+          left: 20,
+          position: "absolute" /**relative is the default */
+        }}
+      ></View>
       <View
         style={{ backgroundColor: "tomato", width: 100, height: 100 }}
       ></View>
