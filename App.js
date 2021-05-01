@@ -1,6 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
+  useDimensions,
+  useDeviceOrientation
+} from "@react-native-community/hooks";
+import {
   StyleSheet,
   Text,
   View,
@@ -11,11 +15,15 @@ import {
   Button,
   Alert,
   Platform,
+  Dimensions,
   StatusBar as stb
 } from "react-native";
 
 export default function App() {
   const handlePress = () => console.log("Pressed");
+  //console.log(useDimensions());
+  //console.log(useDeviceOrientation());
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
