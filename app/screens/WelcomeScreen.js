@@ -6,7 +6,7 @@ function WelcomeScreen(props) {
         <ImageBackground style={styles.background} source={require("../assets/background.jpg")}>
             <View style={styles.logoContainer}>
                 <Image style={styles.logo} source={require("../assets/logo-red.png")}/>
-                <Text>Sell What you dont need</Text>
+                <Text>Sell What you don't need</Text>
             </View>
             <View style={styles.loginButton}></View>
             <View style={styles.registerButton}></View>
