@@ -5,7 +5,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
-import AppText from "./components/AppText";
+import AppText from "./app/components/AppText";
+import AppButton from "./app/components/AppButton";
 
 export default function App() {
   // return <WelcomeScreen/>;
@@ -21,6 +22,7 @@ export default function App() {
     >
       <AppText>Hello, Jc</AppText>
       <MaterialCommunityIcons name="email" size={200} color="gold" />
+      <AppButton title="Login" onPress={() => console.log("tapped")} />
     </View>
   );
 }
