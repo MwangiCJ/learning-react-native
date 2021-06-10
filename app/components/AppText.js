@@ -1,21 +1,22 @@
 import React from "react";
 import { Text, StyleSheet, Platform } from "react-native";
-function AppText(props) {
-  return <Text style={styles.text}>{props.children}</Text>;
+import colors from "../config/colors";
+function AppText({ children, style }) {
+  return <Text style={[styles.text, style]}>{children}</Text>;
 }
 
 export default AppText;
 
 const styles = StyleSheet.create({
   text: {
-    color: "tomato",
-    ...Platform.select({
-      ios: {
-        fontSize: 28,
-      },
-      android: {
-        fontSize: 45,
-      },
-    }),
+    color: colors.primary,
+    // ...Platform.select({
+    //   ios: {
+    //     fontSize: 22,
+    //   },
+    //   android: {
+    //     fontSize: 22,
+    //   },
+    // }),
   },
 });
