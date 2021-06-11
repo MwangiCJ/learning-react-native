@@ -12,9 +12,9 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
   // return <WelcomeScreen/>;
-  //return <ViewImageScreen />;
+  return <ViewImageScreen />;
   //return <WelcomeScreen />;
-  return <ListingDetailsScreen />;
+  //return <ListingDetailsScreen />;
   // return (
   //   <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 40 }}>
   //     <Card
