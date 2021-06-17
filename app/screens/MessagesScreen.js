@@ -1,12 +1,8 @@
 import React from "react";
 import ListItem from "../components/ListItem";
-import {
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  Platform,
-  StatusBar,
-} from "react-native";
+import Constants from "expo-constants";
+import { FlatList, SafeAreaView, StyleSheet } from "react-native";
+
 const messages = [
   {
     id: 1,
@@ -41,7 +37,7 @@ function MessagesScreen(props) {
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Constants.statusBarHeight,
   },
 });
 export default MessagesScreen;
