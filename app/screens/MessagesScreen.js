@@ -3,6 +3,7 @@ import ListItem from "../components/ListItem";
 import Screen from "./Screen";
 import { FlatList, StyleSheet, View } from "react-native";
 import ListItemSeparator from "../components/ListItemSeparator";
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
 
 const messages = [
   {
@@ -30,6 +31,7 @@ function MessagesScreen(props) {
             subTitle={item.description}
             image={item.image}
             onItemPress={() => console.log("Message selected", item)}
+            renderRightActions={ListItemDeleteAction}
           />
         )}
         ItemSeparatorComponent={() => <ListItemSeparator />}
