@@ -13,7 +13,7 @@ import defaultStyles from "../config/styles";
 import AppText from "./AppText";
 import Screen from "../screens/Screen";
 
-function AppPicker({ icon, placeholder, ...otherProps }) {
+function AppPicker({ icon, placeholder }) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
