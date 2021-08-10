@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import AppTextInput from "../components/AppTextInput";
 import AppButton from "../components/AppButton";
 import Screen from "./Screen";
-import AppText from "../components/AppText";
+import ErrorMessage from "../components/ErrorMessage";
 
 const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).label("Pasword"),
@@ -34,7 +34,7 @@ function LoginScreen(props) {
               textContentType="emailAddress"
               onChangeText={handleChange("email")}
             />
-            <AppText style={{ color: "red" }}>{errors.email}</AppText>
+            <ErrorMessage error={errors.email} />
             <AppTextInput
               icon="lock"
               placeholder="Password"
@@ -44,7 +44,7 @@ function LoginScreen(props) {
               textContentType="password"
               onChangeText={handleChange("password")}
             />
-            <AppText style={{ color: "red" }}>{errors.password}</AppText>
+            <ErrorMessage error={errors.password} />
             <AppButton title="Login" onPress={handleSubmit} />
           </>
         )}
